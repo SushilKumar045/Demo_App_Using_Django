@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Demo App Using Django</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style !DOCTYPE html>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+
+
+<div class="" style="background-color:#001F5E;" >
+<div class="clearfix">
+
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Blackcoffer (OPC) Pvt. Ltd.</p></center>
+<center><p style="font-size:30px;color:white;margin-top:10px;">Delivering Beautiful Insights</p></center>
+<center><p style="font-size:25px;color:white;margin-top:10px;">Demo App Using Flask</p></center>
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >K Means clustering Customer segmentation</h2>
+<h4>Developed by Sushil Kumar</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form method="post" action="/predict/">
+    {% csrf_token %}
+
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Annual Income in $(15-137)</label>
+      <input type="number" name="income" id="income" value="" min="15" max="137" placeholder="" required="required">
+      </div>
+
+      <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Spending Score(1-99)</label>
+      <input type="number"  name="score" id="score" value=""min="1" max="99" placeholder="" required="required">
+      </div>
+
+  <div class="col-auto">
+
+    <button type="submit" class="btn btn-danger">Predict type of Customer</button>
+  </div>
+</form>
+
+<br>
+<br>
+{% if prediction_text %}
+   <h2>{{ prediction_text }}</h2>
+{% endif %}
+
+</div>
+
+<div class="" style="background-color:#001F5E;" >
+<div class="clearfix">
+
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Demo Application Using Django</p></center>
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Developed by Sushil Kumar</p></center>
+</div>
+</div>
+</div>
+</body>
+</html>
