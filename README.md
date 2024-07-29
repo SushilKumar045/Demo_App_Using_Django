@@ -124,5 +124,3 @@ The machine learning model used for prediction is a pre-trained model saved as `
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements.
-
-```
